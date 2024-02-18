@@ -85,65 +85,20 @@
 
         <div class="row portfolio-container">
 
+          @foreach ($product as $p)
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{{ asset('frontend/assets/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
+            <img src="{{ asset('backend/upload/resize/'.$p->image) }}" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>iPhone 12 64GB Purple</h4>
-              <p>เร็วยิ่งกว่าเร็ว ทั้งชิพที่เร็วที่สุดในสมาร์ทโฟนอย่าง A14 Bionicจอภาพ OLED แบบขอบจรดขอบ Ceramic Shield ที่ทนต่อการตกกระแทกได้ดีขึ้น 4 เท่า และโหมดกลางคืนบนกล้องทุกตัว iPhone 12 ก็มีหมดทุกอย่าง</p>
-              <a href="{{ asset('frontend/assets/img/portfolio/portfolio-1.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>{{ $p->name }}</h4>
+              <h5>{{ $p->price }}</h5>
+              <p>{{ $p->description }}</p>
+              <a href="{{ asset('backend/upload/resize/'.$p->image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
+          @endforeach
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="{{ asset('frontend/assets/img/portfolio/portfolio-2.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>สมาร์ทโฟน Samsung Galaxy S21 FE (8+128)</h4>
-              <p>Galaxy S21 FE ให้คุณไม่พลาดเก็บทุกโมเม้นท์สนุกๆ ยามค่ำคืน ด้วยกล้องที่ถ่ายภาพและวิดีโอกลางคืน ได้ทุกเลนส์ เห็นรายละเอียดคมชัด สีสด สวย ความเร็ว 5G ที่คุณจะต้องทึ่ง  ชาร์จได้เกิน 50% ใน 30 นาที Super Smooth 120Hz ที่เลื่อนดูได้อย่างสมูทสุด ๆ</p>
-              <a href="{{ asset('frontend/assets/img/portfolio/portfolio-2.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{{ asset('frontend/assets/img/portfolio/portfolio-3.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>โน๊ตบุ๊ค Asus Vivobook 15 X1502ZA-EJ506W Quiet Blue</h4>
-              <p>Vivobook 15 คือแล็ปท็อปที่พร้อมมอบสิ่งนั้นให้คุณ ด้วยตัวเครื่องที่น้ำหนักเบาและกะทัดรัดให้รูปลักษณ์ใหม่อย่างมีสไตล์ที่เข้ากับไลฟ์สไตล์ที่ไม่หยุดนิ่งของคุณ ออกแบบมาเพื่อการทำงานได้อย่างรวดเร็วและมีประสิทธิภาพในแต่ละวัน มาพร้อมคุณสมบัติใหม่ ๆ มอบทุกสิ่งที่คุณต้องการสำหรับการทำงานและความบันเทิงอย่างแท้จริง</p>
-              <a href="{{ asset('frontend/assets/img/portfolio/portfolio-3.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="{{ asset('frontend/assets/img/portfolio/portfolio-4.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>หูฟังไร้สาย Beats Studio Buds Black</h4>
-              <p>Beats Studio Buds หูฟังไร้สาย ตัดเสียงรบกวนแบบไร้สายที่แท้จริง ขับเคลื่อนด้วยพลังเสียงระดับพรีเมี่ยม ควบคุมเสียงได้เต็มๆ เติมพลังให้วันของคุณ ปรับแต่งแพลตฟอร์มเสียงเพื่อฟังเพลงที่ให้เสียงสมดุลแต่ทรงพลัง หูฟังไร้สายทนเหงื่อและทนน้ำระดับ IPX4</p>
-              <a href="{{ asset('frontend/assets/img/portfolio/portfolio-4.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="{{ asset('frontend/assets/img/portfolio/portfolio-5.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Apple AirPods (3rd gen) with Lightning Charging Case</h4>
-              <p>AirPods (รุ่นที่ 3) มาพร้อมระบบเสียงตามตำแหน่งสำหรับคุณที่จะทำให้เสียงอยู่ล้อมรอบตัวคุณ รวมถึงแบตเตอรี่ที่ใช้งานได้นานขึ้น นอกจากนี้ยังทนเหงื่อและน้ำด้วย ทั้งหมดก็เพื่อมอบประสบการณ์ที่บอกเลยว่ามหัศจรรย์จริงๆ</p>
-              <a href="{{ asset('frontend/assets/img/portfolio/portfolio-5.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{{ asset('frontend/assets/img/portfolio/portfolio-6.jpg')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>คีย์บอร์ดเกมมิ่ง Keychron Gaming Keyboard K8 Pro Swappable RGB Backlight Aluminum Red Switch - Black (Eng/TH)</h4>
-              <p>แมคคานิคอลคีย์บอร์ดไร้สายขนาด Tenkeyless ยอดนิยม ที่รองรับซอฟต์แวร์ QMK/VIA เครื่องแรกของโลก มาพร้อม Gateron Mechanical สวิตช์ที่จะมอบสัมผัสยอดเยี่ยมมากขึ้น และสามารถคัสต้อมได้ทั้งส่วนฮาร์ดแวร์และซอฟต์ มากกว่านั้นยังให้คุณทำ Macro ปุ่มคำสั่งสำหรับคำสั่งที่ซับซ้อนให้ง่ายขึ้นเพียงปุ่มเดียว K8 Pro มีฟังก์ชั่นครบครันในดีไซน์กะทัดรัด มาพร้อม 87 ปุ่มที่จำเป็นพร้อมให้เชื่อมต่อไร้สายผ่าน Bluetooth</p>
-              <a href="{{ asset('frontend/assets/img/portfolio/portfolio-6.jpg')}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
 
         </div>
 

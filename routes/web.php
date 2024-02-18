@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,11 +18,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $product = Product::all();
+    return view('welcome',compact('product'));
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $pro = Product::all();
+    $user = User::all();
+    return view('dashboard',compact('pro','user'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
